@@ -1,0 +1,58 @@
+#container {
+	width: 700px;
+	margin: auto;
+	background-color: white;
+	padding: 40px;
+	border-radius: 5px;
+}
+
+html {
+	background-color: #236A62;
+}
+
+/*********
+Header
+*********/
+
+nav {
+	text-align: center;
+}
+
+nav a {
+	margin: 5px 10px;
+}
+
+/*********
+Body
+*********/
+
+#blog-content {
+	width: 80%;
+	float: left;
+}
+
+#blog-navigation {
+	width: 19.5%;
+	float: right;
+	margin-top: 25px;
+}
+
+#blog-navigation ul {
+	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+}
+
+#blog-navigation ul li {
+	margin: 12px;
+}
+
+/*********
+Footer
+*********/
+
+footer {
+	width: 100%;
+	clear: both;
+	text-align: center;
+}
