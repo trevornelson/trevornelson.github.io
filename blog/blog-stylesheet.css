@@ -1,27 +1,38 @@
 #container {
 	width: 700px;
 	margin: auto;
-	background-color: white;
+	background-color: #00AFA9;
 	padding: 40px;
 	border-radius: 5px;
 }
 
 html {
-	background-color: #236A62;
+	background-color: #FFF5E0;
+	font-family: 'Roboto Slab', Arial;
 }
 
-/*********
+/*******
 Header
-*********/
+*******/
 
 nav {
+	clear: both;
+	display: block;
+	height: 50px;
+	background-color: #4C4C4C;
 	text-align: center;
 }
 
 nav a {
-	margin: 5px 10px;
+	font-family: 'Roboto Slab', Arial;
+	font-size: 32px;
+	margin: 0px 15px 0px 15px;
 }
 
+nav a:link, nav a:visited {
+	color: #00AFA9;
+	text-decoration: none;
+}
 /*********
 Body
 *********/

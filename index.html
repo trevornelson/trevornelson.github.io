@@ -1,110 +1,91 @@
 <html>
 	<head>
 		<title>Dev Bootcamp Site | Trevor Nelson</title>
-		<link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<nav>
-			<a href="#">Home</a>
-			<a href="#">Projects</a>
-			<a href="#">Blog</a>
-			<a href="#">Resume</a>
+			<a href="#about">Home</a>
+			<a href="#projects">Projects</a>
+			<a href="#blog_archive">Blog</a>
+			<a href="#resume">Resume</a>
 		</nav>
 
 		<main>
 			<section id="about">
-				<img src="img/headshot.jpeg" id="headshot"/>
-				<div id="social">
-					<a href="#">
-						<img src="img/linkedin.jpg"/>
-					</a>
-					<a href="#">
-						<img src="img/google_plus.jpg"/>
-					</a>
-					<a href="#">
-						<img src="img/twitter.jpg"/>
-					</a>
-					<a href="#">
-						<img src="img/github.jpg"/>
-					</a>
+				<div id="about-imgs">
+					<img src="img/headshot.jpeg" id="headshot"/>
+					<div id="social">
+						<a href="https://www.linkedin.com/pub/trevor-nelson/27/b43/42a">
+							<img src="img/linkedin.jpg"/>
+						</a>
+						<a href="google.com/+TrevorNelsonPlus">
+							<img src="img/google_plus.jpg"/>
+						</a>
+						<a href="https://twitter.com/trevor_a_nelson">
+							<img src="img/twitter.jpg"/>
+						</a>
+						<a href="https://github.com/trevornelson">
+							<img src="img/github.jpg"/>
+						</a>
+					</div>
 				</div>
 				<div id="about-text">
-					<h2>About Trevor</h2>
-					<p>Placeholder text for about me and professional goals section.</p>
+					<h2>Hi, I'm Trevor.</h2>
+					<p>I currently live in New York City and am working as a Digital Strategy Manager at Acceleration Partners. I'm currently enrolled in Dev Bootcamp, and created this site to chronical my journey towards becoming a programmer.</p>
+					<p>After learning python on my own for the past year, my passion and interest in programming has grown from a hobby into a passion. I've realized that I need to be able to completely focus on learning software development fulltime in order to become a developer- nights and weekends alone won't cut it.</p>
 				</div>
 			</section>
 			<section id="projects">
-				<div class="tabs">
-					<div class="tab-menu">
-						<ul>
-							<li><a href="#project1">Project 1</a></li>
-							<li><a href="#project2">Project 2</a></li>
-							<li><a href="#project3">Project 3</a></li>
-							<li><a href="#project4">Project 4</a></li>
-						</ul>
-					</div>
-					<div class="tab-content" id="project1">
-						<img src="img/project1.png"/>
-						<h3>Project 1 Name<h3>
-						<p>Short description about the project.</p>
-						<a href="#">Link to project</a>
-					</div>
-					<div class="tab-content" id="project2">
-						<img src="img/project1.png"/>
-						<h3>Project 2 Name<h3>
-						<p>Short description about the project.</p>
-						<a href="#">Link to project</a>
-					</div>
-					<div class="tab-content" id="project3">
-						<img src="img/project1.png"/>
-						<h3>Project 3 Name<h3>
-						<p>Short description about the project.</p>
-						<a href="#">Link to project</a>
-					</div>
-					<div class="tab-content" id="project4">
-						<img src="img/project1.png"/>
-						<h3>Project 4 Name<h3>
-						<p>Short description about the project.</p>
-						<a href="#">Link to project</a>
-					</div>
+				<h2>Projects</h2>
+				<div class="project-description-left">
+					<img src="img/project1.png"/>
+					<h3>Project 1 Name</h3>
+					<p>Short description about the project.</p>
+					<a href="#">Link to project</a>
+				</div>
+				<div class="project-description-right">
+					<img src="img/project1.png"/>
+					<h3>Project 2 Name</h3>
+					<p>Short description about the project.</p>
+					<a href="#">Link to project</a>
+				</div>
+				<div class="project-description-left">
+					<img src="img/project1.png"/>
+					<h3>Project 3 Name</h3>
+					<p>Short description about the project.</p>
+					<a href="#">Link to project</a>
+				</div>
+				<div class="project-description-right">
+					<img src="img/project1.png"/>
+					<h3>Project 4 Name</h3>
+					<p>Short description about the project.</p>
+					<a href="#">Link to project</a>
 				</div>
 			</section>
 			<section id="blog_archive">
 				<h2>Blog Articles</h2>
 				<div id="article-list">
 					<div class="article-column" id="column-1">
-						<a href="#" class="article-link">Blog Post 1</a>
-						<a href="#" class="article-link">Blog Post 2</a>
-						<a href="#" class="article-link">Blog Post 3</a>
-						<a href="#" class="article-link-unposted">Blog Post 4</a>
+						<a href="/blog/c1-chefs-kitchen.html" class="article-link">Chef's Kitchen</a>
+						<a href="/blog/t1-git-blog.html" class="article-link">Git, Github & The Command Line</a>
 					</div>
 					<div class="article-column" id="column-2">
-						<a href="#" class="article-link-unposted">Blog Post 5</a>
-						<a href="#" class="article-link-unposted">Blog Post 6</a>
-						<a href="#" class="article-link-unposted">Blog Post 7</a>
-						<a href="#" class="article-link-unposted">Blog Post 8</a>
 					</div>
 					<div class="article-column" id="column-3">
-						<a href="#" class="article-link-unposted">Blog Post 9</a>
-						<a href="#" class="article-link-unposted">Blog Post 10</a>
-						<a href="#" class="article-link-unposted">Blog Post 11</a>
-						<a href="#" class="article-link-unposted">Blog Post 12</a>
 					</div>
 					<div class="article-column" id="column-4">
-						<a href="#" class="article-link-unposted">Blog Post 13</a>
-						<a href="#" class="article-link-unposted">Blog Post 14</a>
-						<a href="#" class="article-link-unposted">Blog Post 15</a>
-						<a href="#" class="article-link-unposted">Blog Post 16</a>
 					</div>
 				</div>
 			</section>
 			<section id="resume">
 				<h2>Resume</h2>
 				<ul>
-					<li>experience 1</li>
-					<li>experience 2</li>
-					<li>experience 3</li>
-					<li>experience 4</li>
+					<li>Developed Google Analytics API Reporting Platform</li>
+					<li>Increased Organic Search Traffic +64% For a National Sporting Goods Brand in 4 Months</li>
+					<li>Reduced a Lingerie Ecommerce Retailer's Facebook Ads CPA -59% While Growing Revenue 30%</li>
+					<li>Grew AdWords Revenue +104% While Increasing Margin +15% For a Fishing Supply Retailer</li>
 				</ul>
 				<br>
 				<h3>Work History</h3>
@@ -112,27 +93,27 @@
 					<h3 class="job-title">Manager, Digital Strategy</h3>
 					<h3 class="company">Acceleration Partners</h3>
 					<ul>
-						<li>Job description</li>
-						<li>Job description</li>
-						<li>Job description</li>
+						<li>Managed digital strategy retainer accounts and projects</li>
+						<li>Created client-facing reporting dashboards using the Google Analytics API</li>
+						<li>Consulted on information architecture, SEO and analytics</li>
 					</ul>
 				</div>
 				<div class="job">
-					<h3 class="job-title">Associate, Digital Strategy</h3>
-					<h3 class="company">Acceleration Partners</h3>
-					<ul>
-						<li>Job description</li>
-						<li>Job description</li>
-						<li>Job description</li>
-					</ul>
-				</div>
-				<div class="job">
-					<h3 class="job-title">SEO Consultant</h3>
+					<h3 class="job-title">SEO & PPC Consultant</h3>
 					<h3 class="company">Freelance</h3>
 					<ul>
-						<li>Job description</li>
-						<li>Job description</li>
-						<li>Job description</li>
+						<li>Contracted with marketing and web design agencies</li>
+						<li>Conducted technical SEO audits and PPC account audits</li>
+						<li>Executed backlink audit and removal campaigns</li>
+					</ul>
+				</div>
+				<div class="job">
+					<h3 class="job-title">Product Merchandiser</h3>
+					<h3 class="company">HomeWetBar.com</h3>
+					<ul>
+						<li>Oversaw marketing including SEO, store feeds and site content</li>
+						<li>Prepared sales forecasts and purchased all product inventory</li>
+						<li>Developed website optimization projects and a full site rebrand</li>
 					</ul>
 				</div>
 			</section>

@@ -1,0 +1,152 @@
+/*******
+Main Structure
+*******/
+
+html {
+	background-color: #FFF5E0;
+	font-family: 'Roboto Slab', Arial;
+}
+
+main {
+	background-color: #00AFA9;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #003432;
+}
+
+h2 {
+	font-size: 45px;
+	font-weight: bold;
+	color: #003432;
+}
+
+section {
+	display: inline-block;
+	width: 100%;
+	clear: both;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*******
+Header
+*******/
+
+nav {
+	clear: both;
+	display: block;
+	height: 50px;
+	background-color: #4C4C4C;
+	text-align: center;
+}
+
+nav a {
+	font-family: 'Roboto Slab', Arial;
+	font-size: 32px;
+	margin: 0px 15px 0px 15px;
+}
+
+nav a:link, nav a:visited {
+	color: #00AFA9;
+	text-decoration: none;
+}
+
+/*******
+About Section
+*******/
+
+#about {
+	width: 100%;
+}
+
+#about-imgs {
+	width: 20%;
+	float: left;
+}
+
+#headshot {
+	margin: 20px;
+}
+
+#social {
+	margin: 0px 20px 0px 20px;
+	width: 150px;
+}
+
+#social a {
+	margin-right: 6px;
+}
+
+#social a:link {
+	text-decoration: none;
+}
+
+#about-text {
+	width: 80%;
+	float: right;
+}
+
+/*******
+Projects Section
+*******/
+
+#projects {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.project-description-left {
+	width: 48%;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.project-description-right {
+	width: 48%;
+	float: right;
+	margin-bottom: 50px;
+}
+
+/*******
+Blog Articles Section
+*******/
+
+#article-list {
+	background-color: #808080;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	height: 250px;
+}
+
+.article-column {
+	width: 24%;
+	display: inline-block;
+}
+
+.article-column a {
+	display: block;
+	margin: 20px 0 20px 0;
+}
+
+.article-column a:link, a:visited {
+	color: black;
+}
+
+.article-link-unposted {
+	display: none;
+}
+
+/*******
+Resume Section
+*******/
+
+.job {
+	margin-left: 25px;
+}
