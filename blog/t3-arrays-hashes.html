@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+  <title>Your page title here</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="container">
+    <nav>
+      <a href="../index.html#about">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#blog_archive">Blog</a>
+      <a href="../index.html#resume">Resume</a>
+    </nav>
+
+    <main>
+      <div id="blog-content">
+        <h1>Hashes, Arrays &amp; Technical Death Metal</h1>
+        <h4>December 7, 2014</h4>
+
+        <section>
+          <p>
+            Week 3 of Dev Bootcamp Phase 0 was a crash course in the foundations of ruby. Exercises for the week covered variables, condition statements and methods, as well data structures. Data structures are an incredibly important element of programming that allow computer programs to organize data for a specific process. Using data structures in a program allows for data to be accessed in a predictable, standardized way and is one of the central concepts in programming that allow for efficient, reusable code.
+          </p>
+          <p>
+              One of the most widely used and important data structures is called an array. The word “array” sounds a whole lot more daunting than it is- an array is basically just a list of objects that your program can access through a single variable name. The beauty with arrays is that they allow a program to run the same code on a list of objects. This is commonly called a loop, and is invaluable for writing efficient, easy to manage code. Say, for example, you wanted to write a program to print out your favorite albums from 2014. Without an array, you would need to do something like this:
+          </p>
+          <p>
+          	<pre>
+          		<code>
+print “Ryan Adams – Ryan Adams”
+print “The Flesh Prevails – Fallujah”
+print “Conquering Dystopia – Conquering Dystopia”
+print “Voices – Phantogram”
+print “Morning Phase – Beck”
+print “The Physical World – Death From Above 1979”
+print “Once More 'Round The Sun – Mastodon”
+print “They Want My Soul – Spoon”
+print “What Is This Heart? - How To Dress Well”
+print “Singles – Future Islands”
+      			</code>
+  			</pre>
+          </p>
+          <p>
+          	My outstandingly impeccable musical taste aside, see how verbose that is? Now think about if you also wanted your program to print out the top 10 movies and plays. There's a lot of code for a seemingly simple end goal. Now, if all of these album titles were stored in a list, our code could look like this:     
+          </p>
+          <p>
+          	<pre>
+          		<code>
+top_albums_2014 = [“Ryan Adams – Ryan Adams”, “The Flesh Prevails – Fallujah”, “Conquering Dystopia – Conquering Dystopia” ….]
+
+top_albums_2014.each do |album|
+  print album
+end
+          		</code>
+          	</pre>
+          </p>
+          <p>
+          	Quite a bit cleaner, right? But what if we want to be able to add more info about each album, like the release date, genre and and a link to the band's website? While you could do this in arrays, it would be kind of messy. Arrays are really good for listing out the same kind of information, but aren't really effective when it comes to combining different types of data, because there isn't a meaningful way to access objects in an array besides their sequential order. This is where hashes, sometimes referred to as dictionaries in other programming languages, come in handy. Hashes allow for data to be labeled using a structure of key: value. Here's what a hash might look like for one of the albums in my top albums of 2014 list:
+      	  </p>
+          <p>
+            <pre>
+              <code>
+the_flesh_prevails = {'album':'The Flesh Prevails', 'artist':'Fallujah', 'genre':'Technical Death Metal', 'website':'http://fallujah.bandcamp.com/'}
+              </code>
+            </pre>
+          </p>
+      	  <p>
+		      Now for the cool part- you can combine a list of these hashes into an array and loop through this array of hashes, accessing specific pieces of data as you go. Nerd-rad! Here's an array of variables that link to  a hash like the one above, and the code needed to print this data:										
+          </p>
+          <p>
+            <pre>
+              <code>
+top_albums_2014 = [ryan_adams, the_flesh_prevails, conquering_dystopia, voices, morning_phase, the_physical_world, once_more_round_the_sun, they_want_my_soul, what_is_this_heart, singles]
+
+print “Trevor's Top Albums of 2014”
+top_albums_2014.each do |album|
+  print “Album Title: “ + album['album']
+  print “Artist: “ + album['artist']
+  print “Genre: “ + album['genre']
+  print “Website: “ + album['website']
+end
+
+              </code>
+            </pre>
+          </p>
+          <p>
+          Pretty cool, amirite? Using data structures like this ends up being kind of similar to how websites generate dynamic content, such as Facebook displaying your newsfeed. The newsfeed could contain a list of your friends posts (arrays), with each user's name, profile picture, status update ect... contained in a hash for that newsfeed post. 
+          </p>
+        </section>
+      </div>
+
+      <section id="blog-navigation">
+        <ul>
+          <li><a href="c1-chefs-kitchen.html">Chef's Kitchen</a></li>
+          <li><a href="t1-git-blog.html">Git, GitHub &amp; Command line</a></li>
+          <li><a href="t2-css-design.html">CSS Design</a></li>
+          <li><a href="t3-arrays-hashes.html">Arrays, Hashes &amp; Technical Death Metal</a></li>
+        </ul> 
+      </section>
+
+      <footer>
+        <p>&copy; Text</p>
+      </footer>
+    </div>
+  </main>
+</body>
+
