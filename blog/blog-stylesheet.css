@@ -58,6 +58,13 @@ Body
 	margin: 12px;
 }
 
+code {
+	display: block;
+	background-color: #454545;
+	color: #E6E6E6;
+	padding: 4px;
+}
+
 /*********
 Footer
 *********/
