@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <title>Your page title here</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="container">
+    <nav>
+      <a href="../index.html#about">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#blog_archive">Blog</a>
+      <a href="../index.html#resume">Resume</a>
+    </nav>
+
+    <main>
+      <div id="blog-content">
+        <h1>Using The Enumerable#map Method</h1>
+        <h4>December 14, 2014</h4>
+
+        <section>
+          <p>
+            One of the most useful Ruby methods I've learned about so far at Dev Boorcamp is the #map method of the enumerable class. This method iterates through an array or hash, running a code block on each element and returning an array or hash of the altered values. A quick demonstration to drive things home is always nice:
+          </p>
+          <p>
+          	<pre>
+          		<code>
+> [1,2,3,4,5,6,7,8].map {|x| x + 100}
+=> [101, 102, 103, 104, 105, 106, 107, 108]
+      			</code>
+  			</pre>
+          </p>
+          <p>
+          	 Running the above code in IRB will iterate through each of the array elements and add 100 to each of them. The |x| portion of the line of code is setting x as the code block's variable which, in this case, corresponds to the current element in an array as it's being iterated over. Arrays are pretty easy-peasy with the map method, but- 
+          </p>
+          <img src="img/hashes-how-do-they-work.jpg"/>
+          <p>
+            Using the #map method on a hash is pretty similar to an array, spare 3 key (no pun intended) differences:
+          </p>
+          <p>
+            1. The map's code block variable needs a buddy. Each iteration of an array just contained a single object, but each iteration of a hash has 2- one for the key and one for the value. This means the map method code block needs a variable for each. Ruby developers commonly use |k, v|, where “k” is the key and “v” is the value.
+          </p>
+          <p>
+            2. The code after the block variables needs to be in those cute little curly brackets or else your code will throw errors.
+          </p>
+          <p>
+            … and I can't remember what #3 was. Oh well, moving forward. Once again, a demonstration is worth a thousand words. Unless the demonstration is already a thousand words, then it's worth like a billion or something.
+          </p>
+          <p>
+          	<pre>
+          		<code>
+> hash = {“one”=>1, “two”=>2, “three”=>3, “four”=>4, “five”=>5, “six”=>6}
+> hash.map{ |k, v| { k => v + 100 } }
+=> [{“one”=>101}, {“two”=>102}, {“three”=>103}, {“four”=>104}, {“five”=>105}, {“six”=>106}]
+          		</code>
+          	</pre>
+          </p>
+          <p>
+          	Hold the phone. The output looks like it's actually an array? Ah, that's right- that's what key difference #3 was.
+          </p>
+          <p>
+            3. Using #map on a hash will output an array version of the hash.
+          </p>
+          <p>
+            While you can hack this array of key/value pairs to be usable, it definitely isn't ideal because it won't behave like a normal hash. I found a really handy-dandy solution to this that requires you to extend the standard Hash class in Ruby. No worries, it's not as scary as it sounds.
+      	  </p>
+          <p>
+            <pre>
+              <code>
+class Hash
+    def hmap(&amp;block)
+        Hash[self.map {|k,v|| block.call(k,v) }]
+    end
+end
+              </code>
+            </pre>
+          </p>
+      	  <p>
+            This new method looks like this in practice-								
+          </p>
+          <p>
+            <pre>
+              <code>
+> hash.hmap{ |k,v| [ k => v + 100 ] }
+=> {“one”=>101, “two”=>102, “three”=>103, “four”=>104, “five”=>105, “six”=>106} 
+              </code>
+            </pre>
+          </p>
+          <p>
+            That's hot biscuits, right? Special thanks to <a href="http://chrisholtz.com/blog/lets-make-a-ruby-hash-map-method-that-returns-a-hash-instead-of-an-array/">Chris Holtz</a> for the great #hmap method.
+          </p>
+        </section>
+      </div>
+
+      <section id="blog-navigation">
+        <ul>
+          <li><a href="c1-chefs-kitchen.html">Chef's Kitchen</a></li>
+          <li><a href="t1-git-blog.html">Git, GitHub &amp; Command line</a></li>
+          <li><a href="t2-css-design.html">CSS Design</a></li>
+          <li><a href="t3-arrays-hashes.html">Arrays, Hashes &amp; Technical Death Metal</a></li>
+          <li><a href="c3-thinking-styles.html">Dev Bootcamp &amp; Learning How To Learn</a></li>
+          <li><a href="c4-tech-issues.html">Drowning In A Sea Of Data</a></li>
+          <li><a href="t4-enumerable-methods.html">Using The Enumberable#map Method</a></li>  
+        </ul> 
+      </section>
+
+      <footer>
+        <p>&copy; Text</p>
+      </footer>
+    </div>
+  </main>
+</body>
+
