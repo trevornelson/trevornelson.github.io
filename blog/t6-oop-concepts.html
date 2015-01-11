@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+  <title>H to the Is-A, V to the Has-A</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="container">
+    <nav>
+      <a href="../index.html#about">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#blog_archive">Blog</a>
+      <a href="../index.html#resume">Resume</a>
+    </nav>
+
+    <main>
+      <div id="blog-content">
+        <h1>H to the Is-A, V to the Has-A</h1>
+        <h4>January 11, 2015</h4>
+
+        <section>
+          <p>
+            One of the core tenets of efhficient and easy-to-manage software is the DRY, or “don't repeat yourself”, principle. Reusing code where possible makes debugging and updating code much easier than the alternative. Two of the main ways to keep your code nice and DRY is through class inheritance and composition. 
+          </p>
+          <p>
+            Inheritance is the concept of creating a parent-child relationship between two classes. The child class inherits the methods and variables from the parent class, which helps software avoid repeating itself. Here's an example:
+          </p>
+          <p>
+          	<pre>
+          		<code>
+class Musician
+  def initialize(name)
+    @name = name
+  end
+
+  def play_music(music)
+    play(music)
+  end
+end
+
+class RapMusician &lt; Musician
+  def initialize
+    @genre = rap
+  end
+
+  def rap(lyrics, beat)
+    play_music(beat)
+    print lyrics
+  end
+
+end
+
+jova = RapMusician.new(“Jay-Z”)
+      			</code>
+  			</pre>
+          </p>
+          <p>
+          	 The RapMusician class is a subclass of musician and is said to have an is-a relationship to the Musician class. You can think of this in that a rapper is-a musician. The RapMusician class inherits the @name assignment and the play_music method from the Musician class. The issue with inheritance in some instances is that as software is developed and classes are built upon, the child class can become increasingly different than the parent class until they are only loosely similar. 
+          </p>
+          <p>
+            Composition, on the other hand, creates what is called a “has-a” relationship between objects. In practice, this essentially just looks like an object being instantiated inside of another class. An example of this kind of relationship would be a Person object that has-a Car object. 
+          </p>
+          <p>
+          	<pre>
+          		<code>
+class Person
+  def initialize(name, car_model)
+    @name = name
+    @car = Car.new(car_model)
+  end
+end
+
+class Car
+  def initialize(make)
+    @make = make
+  end
+end
+          		</code>
+          	</pre>
+          </p>
+          <p>
+          	The key to differentiating whether to use composition or inheritance to keep your code DRY is thinking about the nature of the relationship between the objects.  
+          </p>
+        </section>
+      </div>
+
+      <section id="blog-navigation">
+        <ul>
+          <li><a href="c1-chefs-kitchen.html">Chef's Kitchen</a></li>
+          <li><a href="t1-git-blog.html">Git, GitHub &amp; Command line</a></li>
+          <li><a href="t2-css-design.html">CSS Design</a></li>
+          <li><a href="t3-arrays-hashes.html">Arrays, Hashes &amp; Technical Death Metal</a></li>
+          <li><a href="c3-thinking-styles.html">Dev Bootcamp &amp; Learning How To Learn</a></li>
+          <li><a href="c4-tech-issues.html">Drowning In A Sea Of Data</a></li>
+          <li><a href="t4-enumerable-methods.html">Using The Enumberable#map Method</a></li>
+          <li><a href="t5-ruby-classes.html">Classes, Objects and Guitar Shopping Robots</a></li>  
+          <li><a href="c5-feedback.html">Pairing and Feedback</a></li>
+          <li><a href="t6-oop-concepts.html">H to the Is-A, V to the Has-A</a></li>  
+          <li><a href="c6-stereotype-threat.html">Stereotype Threat</a></li>
+        </ul> 
+      </section>
+
+      <footer>
+        <p>&copy; Text</p>
+      </footer>
+    </div>
+  </main>
+</body>
+
