@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+  <title>H to the Is-A, V to the Has-A</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="container">
+    <nav>
+      <a href="../index.html#about">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#blog_archive">Blog</a>
+      <a href="../index.html#resume">Resume</a>
+    </nav>
+
+    <main>
+      <div id="blog-content">
+        <h1>Snakes, Stones &amp; Coffee: Comparing Python, Ruby and JavaScript</h1>
+        <h4>January 18, 2015</h4>
+
+        <section>
+          <p>
+            This week in Dev Bootcamp, we switched gears from Ruby to JavaScript in our challenges. I had hacked my way through some JavaScript before, but had always felt somewhat intimidated by it for some reason. I think that coming from Python, JavaScript syntax felt a lot messier and more difficult to understand at the time, though learning Ruby before diving into JavaScript this time around felt much more natural. Just the little bit of extra training that Ruby provided with things like remembering to close off blocks of code made it much easier to come from Ruby to JavaScript, compared to from Python.
+          </p>
+          <p>
+            After a week of focusing solely on JavaScript, one of the most significant differences between it and Ruby is how the languages create new objects. Ruby is a lot like Python, in that it relies on using classes as a kind of blueprint for making new objects. Here's an example of how you'd create an object in Ruby:
+          </p>
+          <p>
+          	<pre>
+          		<code>
+class Car
+  def initialize(make, model, year, color)
+    @make = make
+    @model = model
+    @year = year
+    @color = color
+    @speed = 0
+  end
+
+  def changeSpeed(mph)
+    @speed = mph
+  end
+end
+
+car = Car.new(“Ford”, “Mustang”, 1969, “red”)
+      			</code>
+  			</pre>
+          </p>
+          <p>
+          	 And now, here's how you'd create the same object in JavaScript:
+          </p>
+          <p>
+          	<pre>
+          		<code>
+var car = {
+  make: “Ford”,
+  model: “Mustang”,
+  year: 1969,
+  color: “red”,
+  speed: 0,
+  changeSpeed: function(mph) {
+    this.speed = mph;
+  }
+}
+          		</code>
+          	</pre>
+          </p>
+          <p>
+          	Right off the bat, there's a big difference- no mention of class. Although JavaScript is also an object-oriented programming language, it doesn't actually have any classes. Once you look past the lack of a class keyword, you can start to see some similarities between the two languages when initializing an object. The newly minted objects from both JavaScript and Ruby have the same properties, and it's fairly easy to see that this.speed is similar to Ruby's @speed, in that it is JavaScript's way of accessing the object's speed property from within the object.
+          </p>
+          <p>
+            Since there are no classes in JavaScript, how do you write DRY code in JavaScript? If you had to create  100 Car objects, you can see how bloated your software would get, and how much of a pain it would be if you wanted to add the license plate number as a property for each of those objects. JavaScript handles this through object prototypes. If classes are blueprints which instruct how a house should be built, then prototypes would be a model home in a sub-development.  The blueprint isn't a house itself, but it's used to let the builders know how many rooms it should have, what the square footage should be ect... In contrast, a model home (the prototype) is a fully functioning house in it's own right, but, like the blueprint, is used to define what characteristics other houses like it have. 
+          </p>
+        </section>
+      </div>
+
+      <section id="blog-navigation">
+        <ul>
+          <li><a href="c1-chefs-kitchen.html">Chef's Kitchen</a></li>
+          <li><a href="t1-git-blog.html">Git, GitHub &amp; Command line</a></li>
+          <li><a href="t2-css-design.html">CSS Design</a></li>
+          <li><a href="t3-arrays-hashes.html">Arrays, Hashes &amp; Technical Death Metal</a></li>
+          <li><a href="c3-thinking-styles.html">Dev Bootcamp &amp; Learning How To Learn</a></li>
+          <li><a href="c4-tech-issues.html">Drowning In A Sea Of Data</a></li>
+          <li><a href="t4-enumerable-methods.html">Using The Enumberable#map Method</a></li>
+          <li><a href="t5-ruby-classes.html">Classes, Objects and Guitar Shopping Robots</a></li>  
+          <li><a href="c5-feedback.html">Pairing and Feedback</a></li>
+          <li><a href="t6-oop-concepts.html">H to the Is-A, V to the Has-A</a></li>  
+          <li><a href="c6-stereotype-threat.html">Stereotype Threat</a></li>
+          <li><a href="c7-values.html">Valuing Creativity</a></li>  
+          <li><a href="t7-JavaScript.html">Snakes, Stones &amp; Coffee: Comparing Python, Ruby and JavaScript</a></li>
+        </ul> 
+      </section>
+
+      <footer>
+        <p>&copy; Text</p>
+      </footer>
+    </div>
+  </main>
+</body>
+
