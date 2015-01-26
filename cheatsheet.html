@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+  <title>Cheatsheet</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="newcss.css"/>
+
+</head>
+<body style="background-image:url(http://www.womenshealthmag.com/files/wh6_uploads/images/froot-loops.jpg)">
+  <div id="container">
+     <h1>Looping in Ruby vs looping in Javascript</h1>
+     <div class="loop">
+         <h2>Looping with 'while'</h2>
+         <div class="left">
+          <h4>Ruby</h4>
+          <pre>
+                while /condition/ do
+                  .........
+                end
+          </pre>
+      </div>
+        <div class="right">
+            <h4>Javascript</h4>
+            <pre>
+    while (/condition/) {
+    ...........
+  }
+          </pre>
+        </div>
+     </div>
+
+       <div class="loop">
+           <h2>Looping certain amount of times</h2>
+           <div class="left">
+            <h4>Ruby</h4>
+            <pre>
+                n.times do
+                  ..........
+                end
+            </pre>
+        </div>
+          <div class="right">
+              <h4>Javascript</h4>
+              <pre>
+   for ( var n=x; n /condition/; n++) {
+     .........
+   }
+        </pre>
+          </div>
+       </div>
+
+        <div class="loop">
+               <h2>Iterating through elements of array</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+                array.each do
+                  ..........
+                end
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+                  <pre>
+    var a = array;
+    for (var i=0; i < a.length; i++) {
+      .......................
+    }
+                </pre>
+              </div>
+           </div>
+           <div class="loop">
+               <h2>breaking out of loop</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+                          break
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+                  <pre>
+                        break
+                </pre>
+              </div>
+           </div>
+           <div class="loop">
+               <h2>Each method</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+            array.each {|element| code}
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+                  <pre>
+    var each = function(array,func) {
+        for (var i=0; i < array.length; i++) {
+        func(array[i]);
+      }
+     };
+      var bugs = [/array/];
+      each(bugs,function(x) {console.log(x);});
+                </pre>
+              </div>
+           </div>
+<div class="loop">
+               <h2>'map' method</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+                array.map {|element| code}
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+                  <pre>
+          var results =[];
+          for (var i=0; i < array.length; i++) {
+            results.push(func(array[i]));
+          }
+          return results;
+            };
+            var nums = [5,12,2,32,54];
+            var timesTwo=function(x){return x*2};
+            var numsTimesTwo = map(nums,timesTwo);
+                </pre>
+              </div>
+           </div>
+
+           <div class="loop">
+               <h2>'select' method</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+                   array.select {|element| code}
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+ <pre>
+          var select = function(array,func)    {
+            var results =[];
+            for (var i=0; i < array.length; i++) {
+            if (func(array[i])) {
+             results.push(func(array[i]));
+            }
+          }
+        return results;
+          };
+
+           </pre>
+              </div>
+           </div>
+<div class="loop">
+               <h2>'max' method</h2>
+               <div class="left">
+                <h4>Ruby</h4>
+                <pre>
+              array.max
+                  </pre>
+            </div>
+              <div class="right">
+                  <h4>Javascript</h4>
+ <pre>
+            var max = function(array)    {
+              var biggest =array[0];
+              for (var i=0; i < array.length; i++) {
+              if (array[i] > biggest) {
+               biggest = array[i]
+              }
+            }
+          return biggest;
+            };
+
+           </pre>
+              </div>
+           </div>
+
+
+  </div>
+  </body></html>
