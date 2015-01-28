@@ -1,20 +1,33 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Dev Bootcamp Site | Trevor Nelson</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<nav>
-			<a href="#about">Home</a>
-			<a href="#projects">Projects</a>
-			<a href="#blog_archive">Blog</a>
-			<a href="#resume">Resume</a>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">trevornelson.github.io</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#about">Home</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#blog_archive">Blog</a></li>
+						<li><a href="#resume">Resume</a></li>
+					</ul>
+				</div>
+			</div>
 		</nav>
-
-		<main>
-			<section id="about">
-				<div id="about-imgs">
+		<div class="container" id="main-content">
+			<div class="row" id="about">
+				<div class="col-md-3" id="about-imgs">
 					<img src="img/headshot.jpeg" id="headshot"/>
 					<div id="social">
 						<a href="https://www.linkedin.com/pub/trevor-nelson/27/b43/42a">
@@ -31,109 +44,164 @@
 						</a>
 					</div>
 				</div>
-				<div id="about-text">
+				<div class="col-md-9" id="about-text">
 					<h2>Hi, I'm Trevor.</h2>
 					<p>I currently live in New York City and am working as a Digital Strategy Manager at Acceleration Partners. I'm currently enrolled in Dev Bootcamp, and created this site to chronical my journey towards becoming a programmer.</p>
 					<p>After learning python on my own for the past year, my passion and interest in programming has grown from a hobby into a passion. I've realized that I need to be able to completely focus on learning software development fulltime in order to become a developer- nights and weekends alone won't cut it.</p>
 				</div>
-			</section>
-			<section id="projects">
+			</div>
+			<div class="row" id="projects">
 				<h2>Projects</h2>
-				<div class="project-description-left">
-					<img src="img/project1.png"/>
-					<h3>Monthly Reporting Dashboard</h3>
-					<p>Developed a monthly reporting dashboard while at Acceleration Partners. The dashboard was built off of Microsoft Access and used Visual Basic to query the Google Analytics API to build client-facing monthly reports.</p>
+				<div role="tabpanel">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+				    	<li role="presentation" class="active"><a href="#project1" role="tab" data-toggle="tab">Reporting Dashboard</a></li>
+				    	<li role="presentation"><a href="#project2" role="tab" data-toggle="tab">Udacity Wiki</a></li>
+				    	<li role="presentation"><a href="#project3" role="tab" data-toggle="tab">Squeek Lights Site</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+				    	<div role="tabpanel" class="tab-pane fade in active" id="project1">
+				    		<div class="col-md-3">
+				    			<img src="img/project1.png"/>
+				    		</div>
+				    		<div class="col-md-9">
+								<h3>Monthly Reporting Dashboard</h3>
+								<p>Developed a monthly reporting dashboard while at Acceleration Partners. The dashboard was built off of Microsoft Access and used Visual Basic to query the Google Analytics API to build client-facing monthly reports.</p>
+							</div>
+				    	</div>
+				    	<div role="tabpanel" class="tab-pane fade" id="project2">
+				    		<div class="col-md-3">
+				    			<img src="img/project2.png"/>
+				    		</div>
+				    		<div class="col-md-9">
+								<h3>Udacity Wiki</h3>
+								<p>Developed the backend for a Wiki as part of the Udacity Backend Web Development course's final project. The site's backend was built using Python and Google App Engine. Core functionality includes cookie based log in/log out, password hashing, and memcached database queries. Creating a new wiki page is done by requesting a new URL. If a URL exists, logged in users are able to edit page content.</p>
+								<h4><a href="http://webdevtrevwiki.appspot.com/">Link to project</a></h4>
+							</div>
+				    	</div>
+				    	<div role="tabpanel" class="tab-pane fade" id="project3">
+				    		<div class="col-md-3">
+				    			<img src="img/project1.png"/>
+				    		</div>
+				    		<div class="col-md-9">
+								<h3>Squeek Lights Site</h3>
+								<p>Site created for a friend's concert lighting rental company. The current site uses Bootstrap, Google App Engine and a Python backend. Building a site admin tool that allows my friend to enter the location and date of shows he is lighting for. Venues can be searched for via the Google Places API, where the latitude and longitude is stored along with the time of the show. The app periodically queries and stores the Instagram API for pics from shows that he lights for.</p>
+								<h4><a href="http://www.squeeklights.com">Link to project</a></h4>
+							</div>
+				    	</div>
+					</div>
 				</div>
-				<div class="project-description-right">
-					<img src="img/project2.png"/>
-					<h3>Udacity Wiki</h3>
-					<p>Developed the backend for a Wiki as part of the Udacity Backend Web Development course's final project. The site's backend was built using Python and Google App Engine. Core functionality includes cookie based log in/log out, password hashing, and memcached database queries. Creating a new wiki page is done by requesting a new URL. If a URL exists, logged in users are able to edit page content.</p>
-					<a href="http://webdevtrevwiki.appspot.com/">Link to project</a>
-				</div>
-				<div class="project-description-left">
-					<img src="img/project1.png"/>
-					<h3>Squeek Lights Site</h3>
-					<p>Site created for a friend's concert lighting rental company. The current site uses Bootstrap, Google App Engine and a Python backend. Building a site admin tool that allows my friend to enter the location and date of shows he is lighting for. Venues can be searched for via the Google Places API, where the latitude and longitude is stored along with the time of the show. The app periodically queries and stores the Instagram API for pics from shows that he lights for.</p>
-					<a href="http://purdylightsapp.appspot.com">Link to project</a>
-				</div>
-				<div class="project-description-right" id="project-hide">
-					<img src="img/project1.png"/>
-					<h3>Project 4 Name</h3>
-					<p>Short description about the project.</p>
-					<a href="#">Link to project</a>
-				</div>
-			</section>
-			<section id="blog_archive">
+			</div>
+
+			<div class="row">
 				<h2>Blog Articles</h2>'
-				<div id="article-list">
-					<div class="article-column" id="column-1">
-						<a href="/blog/c1-chefs-kitchen.html" class="article-link">Chef's Kitchen</a>
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#modalPost1" class="article-link">Chef's Kitchen</a>
 						<a href="/blog/t1-git-blog.html" class="article-link">Git, Github &amp; The Command Line</a>
 						<a href="/blog/t2-css-design.html" class="article-link">CSS Design</a>
 						<a href="/blog/t3-arrays-hashes.html" class="article-link">Arrays, Hashes &amp; Technical Death Metal</a>
 					</div>
-					<div class="article-column" id="column-2">
+					<div class="col-md-3">
 						<a href="/blog/c3-thinking-styles.html" class="article-link">Dev Bootcamp &amp; Learning How To Learn</a>
 						<a href="/blog/c4-tech-issues.html" class="article-link">Drowning In A Sea Of Data</a>
 						<a href="/blog/t4-enumerable-methods.html" class="article-link">Using Enumerable#map Methods</a>
 						<a href="/blog/c5-feedback.html" class="article-link">Pairing and Feedback</a>
 					</div>
-					<div class="article-column" id="column-3">
+					<div class="col-md-3">
 						<a href="/blog/t5-ruby-classes.html" class="article-link">Classes, Objects and Guitar Shopping Robots</a>
 						<a href="/blog/t6-oop-concepts.html" class="article-link">H to the Is-A, V to the Has-A</a>
 						<a href="/blog/c6-stereotype-threat.html" class="article-link">Stereotype Threat</a>
 						<a href="/blog/c7-values.html" class="article-link">Valuing Creativity</a>
 					</div>
-					<div class="article-column" id="column-4">
+					<div class="col-md-3">
 						<a href="/blog/t7-JavaScript.html" class="article-link">Snakes, Stones &amp; Coffee: Comparing Python, Ruby and JavaScript</a>
 						<a href="/blog/c8-conflict.html" class="article-link">Dealing With Conflict</a>
 						<a href="/blog/t8-tech.html" class="article-link">Test Driven Development</a>
 					</div>
 				</div>
-				<a href="blog/index.html">View All Posts</a>
-			</section>
-			<section id="resume">
-				<h2>Resume</h2>
-				<ul>
-					<li>Developed Google Analytics API Reporting Platform</li>
-					<li>Increased Organic Search Traffic +64% For a National Sporting Goods Brand in 4 Months</li>
-					<li>Reduced a Lingerie Ecommerce Retailer's Facebook Ads CPA -59% While Growing Revenue 30%</li>
-					<li>Grew AdWords Revenue +104% While Increasing Margin +15% For a Fishing Supply Retailer</li>
-				</ul>
-				<br>
-				<h3>Work History</h3>
-				<div class="job">
-					<h3 class="job-title">Manager, Digital Strategy</h3>
-					<h3 class="company">Acceleration Partners</h3>
+				<h4><a href="blog/index.html" class="article-link">View All Posts</a></h4>
+			</div>
+			<div id="resume">
+				<div class="row">
+					<h2>Resume</h2>
 					<ul>
-						<li>Managed digital strategy retainer accounts and projects</li>
-						<li>Created client-facing reporting dashboards using the Google Analytics API</li>
-						<li>Consulted on information architecture, SEO and analytics</li>
+						<li>Developed Google Analytics API Reporting Platform</li>
+						<li>Increased Organic Search Traffic +64% For a National Sporting Goods Brand in 4 Months</li>
+						<li>Reduced a Lingerie Ecommerce Retailer's Facebook Ads CPA -59% While Growing Revenue 30%</li>
+						<li>Grew AdWords Revenue +104% While Increasing Margin +15% For a Fishing Supply Retailer</li>
 					</ul>
 				</div>
-				<div class="job">
-					<h3 class="job-title">SEO &amp; PPC Consultant</h3>
-					<h3 class="company">Freelance</h3>
-					<ul>
-						<li>Contracted with marketing and web design agencies</li>
-						<li>Conducted technical SEO audits and PPC account audits</li>
-						<li>Executed backlink audit and removal campaigns</li>
-					</ul>
+				<div class="panel panel-default">
+					<div class="panel-heading"><h2>Work History</h2></div>
+						<div class="row">
+							<div class="col-md-4">
+								<h3 class="job-title">Manager, Digital Strategy</h3>
+								<h3 class="company">Acceleration Partners</h3>
+							</div>
+							<div class="col-md-8">
+								<ul class="list-group">
+									<li class="list-group-item">Managed digital strategy retainer accounts and projects</li>
+									<li class="list-group-item">Created client-facing reporting dashboards using the Google Analytics API</li>
+									<li class="list-group-item">Consulted on information architecture, SEO and analytics</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<h3 class="job-title">SEO &amp; PPC Consultant</h3>
+								<h3 class="company">Freelance</h3>
+							</div>
+							<div class="col-md-8">
+								<ul class="list-group">
+									<li class="list-group-item">Contracted with marketing and web design agencies</li>
+									<li class="list-group-item">Conducted technical SEO audits and PPC account audits</li>
+									<li class="list-group-item">Executed backlink audit and removal campaigns</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<h3 class="job-title">Product Merchandiser</h3>
+								<h3 class="company">HomeWetBar.com</h3>
+							</div>
+							<div class="col-md-8">
+								<ul class="list-group">
+									<li class="list-group-item">Oversaw marketing including SEO, store feeds and site content</li>
+									<li class="list-group-item">Prepared sales forecasts and purchased all product inventory</li>
+									<li class="list-group-item">Developed website optimization projects and a full site rebrand</li>
+								</ul>
+							</div>
+						</div>
 				</div>
-				<div class="job">
-					<h3 class="job-title">Product Merchandiser</h3>
-					<h3 class="company">HomeWetBar.com</h3>
-					<ul>
-						<li>Oversaw marketing including SEO, store feeds and site content</li>
-						<li>Prepared sales forecasts and purchased all product inventory</li>
-						<li>Developed website optimization projects and a full site rebrand</li>
-					</ul>
-				</div>
-			</section>
-		</main>
+				<!--End of work history-->
+			</div>
+			<!--End of Resume-->
+		</div>
 
-		<footer>
-			<p>Copyright Trevor Nelson</p>
-		</footer>
+
+		<!-- Modals -->
+		<div class="modal fade" id="modalPost1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">Test Title</h4>
+					</div>
+					<div class="modal-body">
+						<p>Here is some test text for the blog post.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</body>
 </html>

@@ -1,182 +1,197 @@
 <!DOCTYPE html>
-<head>
-  <title>Cheatsheet</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="newcss.css"/>
+<html>
+  <head>
+    <title>Dev Bootcamp Site | Trevor Nelson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
-<body>
-  <div id="container">
-     <h1>Looping in Ruby vs looping in Javascript</h1>
-     <div class="loop">
-         <h2>Looping with 'while'</h2>
-         <div class="left">
-          <h4>Ruby</h4>
-          <pre>
-                while /condition/ do
-                  .........
-                end
-          </pre>
-      </div>
-        <div class="right">
-            <h4>Javascript</h4>
-            <pre>
-    while (/condition/) {
-    ...........
-  }
-          </pre>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://trevornelson.github.io/">trevornelson.github.io</a>
         </div>
-     </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://trevornelson.github.io/#about">Home</a></li>
+            <li><a href="http://trevornelson.github.io/#projects">Projects</a></li>
+            <li><a href="http://trevornelson.github.io/#blog_archive">Blog</a></li>
+            <li><a href="http://trevornelson.github.io/#resume">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" id="main-content">
+      <h1>Iteration in Ruby vs Javascript</h1>  
+      <div role="tabpanel" id="loop-tabs">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#loop1" role="tab" data-toggle="tab">While Loop</a></li>
+          <li role="presentation"><a href="#loop2" role="tab" data-toggle="tab">For Loop</a></li>
+          <li role="presentation"><a href="#loop3" role="tab" data-toggle="tab">Each Method</a></li>
+          <li role="presentation"><a href="#loop4" role="tab" data-toggle="tab">Break Loop</a></li>
+          <li role="presentation"><a href="#loop5" role="tab" data-toggle="tab">Map Method</a></li>
+          <li role="presentation"><a href="#loop6" role="tab" data-toggle="tab">Select Method</a></li>
+          <li role="presentation"><a href="#loop7" role="tab" data-toggle="tab">Max Method</a></li>
+        </ul>
+      </div>
 
-       <div class="loop">
-           <h2>Looping certain amount of times</h2>
-           <div class="left">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="loop1">
+          <h2>While Loops</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+while /condition/ do
+.........
+end
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+while (/condition/) {
+...........
+}
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop2">
+        <h2>For Loops</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+n.times do
+...........
+end
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+for ( var n=x; n /condition/; n++) {
+.........
+}
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop3">
+          <h2>Each Method</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+array.each do
+  ..........
+end
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+var a = array;
+for (var i=0; i < a.length; i++) {
+  .......................
+}
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop4">
+          <h2>Break Loops</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+break
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+break
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop5">
+          <h2>Map method</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+array.map {|element| code}
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+var results =[];
+for (var i=0; i < array.length; i++) {
+  results.push(func(array[i]));
+  return results;
+};
+
+var nums = [5,12,2,32,54];
+var timesTwo = function(x){return x*2};
+var numsTimesTwo = map(nums,timesTwo);
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop6">
+          <h2>Select method</h2>
+          <div class="col-md-6">
+            <h4><span class="fa fa-diamond"></span>Ruby</h4>
+            <pre>
+array.select {|element| code}
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+var select = function(array,func) {
+  var results =[];
+  for (var i=0; i < array.length; i++) {
+    if (func(array[i])) {
+      results.push(func(array[i]));
+    }
+  }
+  return results;
+};
+            </pre>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="loop7">
+          <h2>Max Method</h2>
+          <div class="col-md-6">
             <h4>Ruby</h4>
             <pre>
-                n.times do
-                  ..........
-                end
+array.max
             </pre>
-        </div>
-          <div class="right">
-              <h4>Javascript</h4>
-              <pre>
-   for ( var n=x; n /condition/; n++) {
-     .........
-   }
-        </pre>
           </div>
-       </div>
-
-        <div class="loop">
-               <h2>Iterating through elements of array</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-                array.each do
-                  ..........
-                end
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
-                  <pre>
-    var a = array;
-    for (var i=0; i < a.length; i++) {
-      .......................
+          <div class="col-md-6">
+            <h4><span class="fa fa-jsfiddle"></span>Javascript</h4>
+            <pre>
+var max = function(array) {
+  var biggest = array[0];
+  for (var i=0; i < array.length; i++) {
+    if (array[i] > biggest) {
+      biggest = array[i]
     }
-                </pre>
-              </div>
-           </div>
-           <div class="loop">
-               <h2>breaking out of loop</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-                          break
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
-                  <pre>
-                        break
-                </pre>
-              </div>
-           </div>
-           <div class="loop">
-               <h2>Each method</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-            array.each {|element| code}
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
-                  <pre>
-    var each = function(array,func) {
-        for (var i=0; i < array.length; i++) {
-        func(array[i]);
-      }
-     };
-      var bugs = [/array/];
-      each(bugs,function(x) {console.log(x);});
-                </pre>
-              </div>
-           </div>
-<div class="loop">
-               <h2>'map' method</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-                array.map {|element| code}
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
-                  <pre>
-          var results =[];
-          for (var i=0; i < array.length; i++) {
-            results.push(func(array[i]));
-          }
-          return results;
-            };
-            var nums = [5,12,2,32,54];
-            var timesTwo=function(x){return x*2};
-            var numsTimesTwo = map(nums,timesTwo);
-                </pre>
-              </div>
-           </div>
+  }
+  return biggest;
+};
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
 
-           <div class="loop">
-               <h2>'select' method</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-                   array.select {|element| code}
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
- <pre>
-          var select = function(array,func)    {
-            var results =[];
-            for (var i=0; i < array.length; i++) {
-            if (func(array[i])) {
-             results.push(func(array[i]));
-            }
-          }
-        return results;
-          };
-
-           </pre>
-              </div>
-           </div>
-<div class="loop">
-               <h2>'max' method</h2>
-               <div class="left">
-                <h4>Ruby</h4>
-                <pre>
-              array.max
-                  </pre>
-            </div>
-              <div class="right">
-                  <h4>Javascript</h4>
- <pre>
-            var max = function(array)    {
-              var biggest =array[0];
-              for (var i=0; i < array.length; i++) {
-              if (array[i] > biggest) {
-               biggest = array[i]
-              }
-            }
-          return biggest;
-            };
-
-           </pre>
-              </div>
-           </div>
-
-
-  </div>
-  </body></html>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+</html>
