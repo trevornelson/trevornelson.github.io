@@ -71,33 +71,11 @@ Projects Section
 Blog Articles Section
 *******/
 
-#article-list {
-	background-color: #808080;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 15px;
-	height: 250px;
-	border: 1px solid black;
-}
 
-.article-column {
-	width: 24%;
+#blog_archive a {
 	display: inline-block;
-}
-
-.article-column a {
-	display: block;
-	margin: 20px 0 20px 0;
-}
-
-.article-column a:link, a:visited {
-	color: black;
-}
-
-.article-link {
-	display: inline-block;
-	margin: 5px 0px 5px 0px;
+	font-size: 20px;
+	margin: 10px 0px 10px 0px;
 }
 
 /*******
