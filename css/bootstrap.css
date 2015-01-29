@@ -1078,7 +1078,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #F2784B;
 }
 input,
 button,
@@ -4838,14 +4838,16 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
+  padding: 100px 15px;
+  margin-top: 50px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #F2784B;
+  height: 850px;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: #F2F1EF;
 }
 .jumbotron p {
   margin-bottom: 15px;
@@ -4864,7 +4866,7 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding: 48px 0;
+    padding: 148px 0;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
