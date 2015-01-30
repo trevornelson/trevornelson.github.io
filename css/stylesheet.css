@@ -37,19 +37,23 @@ body {
 
 #headline{
 	color: #F2F1EF;
+	font-size: 63px;
 }
 
 #sub-headline {
 	color: #F2F1EF;
-	font-size: 35px;
+	font-size: 40px;
 	font-family: 'Roboto Slab', sans-serif;
 	-webkit-text-fill-color: #F2784B;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #F2F1EF;
 }
 
-#main-content {
+#intro {
 	margin-top: 50px;
+	height: auto;
+	padding-top: 175px;
+	padding-bottom: 150px;
 }
 
 #social {
@@ -274,6 +278,26 @@ body {
 	font-size: 20px;
 	font-family: 'Oswald', sans-serif;
 	color: #95A5A6;
+}
+
+#footer {
+	background-color: #F2784B;
+	height: 60px;
+	font-size: 35px;
+	vertical-align: middle;
+}
+
+#footer a:link {
+	color: white;
+}
+
+#footer a:visited {
+	color: white;
+}
+
+#footer a:hover {
+	color: #F8C472;
+	background-color: #F2784B;
 }
 
 .loop-tabs {
