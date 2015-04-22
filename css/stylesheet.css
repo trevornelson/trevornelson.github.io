@@ -80,6 +80,7 @@ body {
 	background-color: #ECECEC;
 	border-top: 5px solid #95A5A6;
 	height: auto;
+	min-height: 1000px;
 	color: #95A5A6;
 	font-size: 18px;
 	font-family: 'Roboto Slab', sans-serif;
