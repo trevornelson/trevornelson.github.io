@@ -121,6 +121,18 @@ body {
 	background-color: #D2D7D3;
 }
 
+a.project-link {
+	border: none;
+	background-color: #F2784B;
+	color: #ECECEC !important;
+	width: 150px;
+}
+
+a.project-link:hover {
+	color: #F2784B !important;
+	background-color: #ECECEC !important;
+}
+
 #blog_archive {
 	background-color: #6C7A89;
 	border-top: 5px solid #F2784B;
