@@ -61,36 +61,73 @@
 		<div class="container-fluid" id="projects">	
 			<div class="container">
 				<h2>projects.</h2>
-				<div class="row">
-		    		<div class="col-md-3">
-		    			<img src="img/project1.png"/>
-		    		</div>
-		    		<div class="col-md-9">
-						<span class="project-title">Monthly Reporting Dashboard</span>
-						<p>Developed a monthly reporting dashboard while at Acceleration Partners. The dashboard was built off of Microsoft Access and used Visual Basic to query the Google Analytics API to build client-facing monthly reports.</p>
+
+				<div class="tabpanel">
+					<ul class="nav nav-pills" role="tablist">
+						<li role="presentation"><a href="#ruby-projects" aria-controls="ruby-projects" role="tab" data-toggle="pill">Ruby</a></li>
+						<li role="presentation"><a href="#javascript-projects" aria-controls="javascript-projects" role="tab" data-toggle="pill">JavaScript</a></li>
+						<li role="presentation"><a href="#python-projects" aria-controls="python-projects" role="tab" data-toggle="pill">Python</a></li>
+						<li role="presentation"><a href="#other-projects" aria-controls="other-projects" role="tab" data-toggle="pill">Other</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane" id="ruby-projects">
+							<h2>Ruby Projects</h2>
+
+
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="javascript-projects">
+							<h2>JavaScript Projects</h2>
+
+
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="python-projects">
+							<h2>Python Projects</h2>
+								<div class="row">
+					    		<div class="col-md-3">
+					    			<img src="img/project2.png"/>
+					    		</div>
+					    		<div class="col-md-9">
+									<span class="project-title">Udacity Wiki</span>
+									<a href="http://webdevtrevwiki.appspot.com/" target="_blank"><span class="fa fa-external-link"></span></a>
+									
+									<p>Developed the backend for a Wiki as part of the Udacity Backend Web Development course's final project. The site's backend was built using Python and Google App Engine. Core functionality includes cookie based log in/log out, password hashing, and memcached database queries. Creating a new wiki page is done by requesting a new URL. If a URL exists, logged in users are able to edit page content.</p>
+									</div>
+								</div>
+
+					    	<div class="row">
+					    		<div class="col-md-3">
+					    			<img src="img/project3.png"/>
+					    		</div>
+					    		<div class="col-md-9">
+									<span class="project-title">Squeek Lights Site</span>
+									<a href="http://www.squeeklights.com" target="_blank"><span class="fa fa-external-link"></span></a>
+									<p>Site created for a friend's concert lighting rental company. The current site uses Bootstrap, Google App Engine and a Python backend. Building a site admin tool that allows my friend to enter the location and date of shows he is lighting for. Venues can be searched for via the Google Places API, where the latitude and longitude is stored along with the time of the show. The app periodically queries and stores the Instagram API for pics from shows that he lights for.</p>
+									</div>
+					    	</div>
+				    	</div>
+
+
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="other-projects">
+							<h2>Other Projects</h2>
+								<div class="row">
+					    		<div class="col-md-3">
+					    			<img src="img/project1.png"/>
+					    		</div>
+					    		<div class="col-md-9">
+									<span class="project-title">Monthly Reporting Dashboard</span>
+									<p>Developed a monthly reporting dashboard while at Acceleration Partners. The dashboard was built off of Microsoft Access and used Visual Basic to query the Google Analytics API to build client-facing monthly reports.</p>
+								</div>
+				    	</div>
+				    	
+						</div>
+
 					</div>
-		    	</div>
-		    	<div class="row">
-		    		<div class="col-md-3">
-		    			<img src="img/project2.png"/>
-		    		</div>
-		    		<div class="col-md-9">
-						<span class="project-title">Udacity Wiki</span>
-						<a href="http://webdevtrevwiki.appspot.com/" target="_blank"><span class="fa fa-external-link"></span></a>
-						
-						<p>Developed the backend for a Wiki as part of the Udacity Backend Web Development course's final project. The site's backend was built using Python and Google App Engine. Core functionality includes cookie based log in/log out, password hashing, and memcached database queries. Creating a new wiki page is done by requesting a new URL. If a URL exists, logged in users are able to edit page content.</p>
-					</div>
-		    	</div>
-		    	<div class="row">
-		    		<div class="col-md-3">
-		    			<img src="img/project3.png"/>
-		    		</div>
-		    		<div class="col-md-9">
-						<span class="project-title">Squeek Lights Site</span>
-						<a href="http://www.squeeklights.com" target="_blank"><span class="fa fa-external-link"></span></a>
-						<p>Site created for a friend's concert lighting rental company. The current site uses Bootstrap, Google App Engine and a Python backend. Building a site admin tool that allows my friend to enter the location and date of shows he is lighting for. Venues can be searched for via the Google Places API, where the latitude and longitude is stored along with the time of the show. The app periodically queries and stores the Instagram API for pics from shows that he lights for.</p>
-					</div>
-		    	</div>
+				</div>
 			</div>
 		</div>
 		<div class="container-fluid" id="blog_archive">
