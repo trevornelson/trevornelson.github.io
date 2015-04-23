@@ -56,8 +56,17 @@ body {
 	padding-bottom: 150px;
 }
 
+.navbar-dropdown {
+	color: #777777;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	line-height: 20px;
+	position: relative;
+	display: block;
+}
+
 #social {
-	text-align: center;
+	text-align: left;
 }
 
 #social span {
