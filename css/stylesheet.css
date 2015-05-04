@@ -142,7 +142,7 @@ a.project-link:hover {
 	background-color: #ECECEC !important;
 }
 
-.project-stack {
+.project-stack, .project-date {
 	color: #6C7A89;
 	font-weight: bold;
 }
