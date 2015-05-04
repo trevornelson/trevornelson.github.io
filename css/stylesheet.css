@@ -142,6 +142,11 @@ a.project-link:hover {
 	background-color: #ECECEC !important;
 }
 
+.project-stack, .project-date {
+	color: #6C7A89;
+	font-weight: bold;
+}
+
 #blog_archive {
 	background-color: #6C7A89;
 	border-top: 5px solid #F2784B;
